@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     while (index < argc) {
         FILE *fp = fopen(argv[index], "r");
         if (fp == NULL) {
-            printf("wcat: cannot open file\n");
+            printf("cannot open file\n");
             return 1;
         }
 
