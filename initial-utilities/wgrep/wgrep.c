@@ -7,9 +7,9 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    FILE *fp = fopen(argv[3], "r");
+    FILE *fp = fopen(argv[2], "r");
     if (fp == NULL) {
-        printf("wgrep: cannout open file\n");
+        printf("wgrep: cannot open file\n");
         return 1;
     }
 
@@ -23,5 +23,5 @@ int main(int argc, char* argv[]) {
             }
     }
 
-
+    return 0;
 }
