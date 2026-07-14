@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
 
     while(getline(&line, &size, fp) != -1) {
             if (strstr(line, string) != NULL) {
-                printf("%s\n", line);
+                printf("%s", line);
             }
     }
 
