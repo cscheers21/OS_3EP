@@ -5,18 +5,26 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
-    FILE *fp = fopen(argv[1], "r");
-    if (fp == NULL) {
-        printf("cannot open file\n");
-        return 1;
+    int index = 1;
+
+    while (index < argc) {
+        FILE *fp = fopen(argv[index], "r");
+        if (fp == NULL) {
+            printf("wcat: cannot open file\n");
+            return 1;
+        }
+
+        char buffer[100];
+
+        while (fgets(buffer, sizeof(buffer), fp)) {
+            printf("%s", buffer);
+        }
+
+        fclose(fp);
+        index++;
     }
 
-    char buffer[100];
-
-    while (fgets(buffer, sizeof(buffer), fp)) {
-        printf("%s", buffer);
-    }
-    fclose(fp);
+   
 
     return 0;
 }
