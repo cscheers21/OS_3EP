@@ -12,13 +12,13 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    char prev_char = fgetc(fp);
+    int prev_char = fgetc(fp);
     if (prev_char == EOF) {
         return 0;
     }
 
     int counter = 1;
-    char sent_char;
+    int sent_char;
 
     while (prev_char != EOF) {
         sent_char = fgetc(fp);
@@ -34,6 +34,6 @@ int main(int argc, char *argv[]) {
         prev_char = sent_char;
         sent_char = fgetc(fp);
     }
-    
+
     return 0;
 }
