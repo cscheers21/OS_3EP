@@ -38,13 +38,7 @@ int main(int argc, char *argv[]) {
 
         prev_char = sent_char;
         sent_char = fgetc(fp);
-        
-        return 0;
     }
 
-
-    
-
-
-
+    return 0;
 }
